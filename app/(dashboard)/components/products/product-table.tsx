@@ -39,7 +39,7 @@ const ProductTable = ({ products, onDelete, onEdit }: TProductTableProps) => {
                             </td>
                             <td className="px-6 py-4 font-medium">
                                 <div className="rounded-md bg-gray-200 px-2 py-1 w-fit">
-                                    {data.category?.name ?? "Uncategorized"}
+                                    {data.category.name}
                                 </div>
                             </td>
                             <td className="px-6 py-4 font-medium">
