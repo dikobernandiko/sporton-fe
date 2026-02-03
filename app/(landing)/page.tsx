@@ -13,8 +13,8 @@ export default async function Home() {
   return (
   <main>
     <HeroSection />
-    <CategoriesSection categories={categories} />
-    <ProductsSection products={products}/>
+    <CategoriesSection categories={categories || []} />
+    <ProductsSection products={products || []}/>
   </main>
   );
 }

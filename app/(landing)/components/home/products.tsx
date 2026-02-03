@@ -37,7 +37,7 @@ const ProductsSection = ({products}: TProductsProps) => {
                         <h3 className="font-medium text-lg mb-1.5">{product.name}</h3>
                         <div className="flex justify-between mb-8">
                             <div className="text-gray-500">
-                                {product.category.name}
+                                {product.category?.name || "Uncategorized"}
                             </div>
                             <div className="font-medium text-primary">
                                 {priceFormatter(product.price)}
