@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { notFound } from "next/navigation";
 import ProductActions from "../../components/product-detail/product-actions";
 import priceFormatter from "@/app/utils/price-formatter";
 import { getProductDetail } from "@/app/services/product.service";
@@ -11,6 +12,10 @@ const ProductDetail =  async ({ params }: TPageProps) => {
     const { id } = await params;
 
     const product = await getProductDetail(id);
+
+    if (!product) {
+        notFound();
+    }
 
 
     return (
